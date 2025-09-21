@@ -10,7 +10,7 @@ CREATE TABLE Employees (
 ALTER TABLE Employees RENAME COLUMN emp_name TO full_name;
 
 -- Q3. Drop the check constraint on salary and insert employee with salary = 5000
-ALTER TABLE Employees DROP CONSTRAINT SYS_C001; -- replace SYS_C001 with actual constraint name
+ALTER TABLE Employees DROP CONSTRAINT CHECK(salary > 20000);
 INSERT INTO Employees (emp_id, full_name, salary, dept_id) VALUES (1, 'Ali Khan', 5000, NULL);
 
 -- Q4
